@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Қазақ батырларының аттары</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      color: #2b1d0e;
+      background: url('жылкыбатыр2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: linear-gradient(to right, #4b0000, #8b1e1e);
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      color: #ffdd99;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 20px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #ffcc00;
+      color: #4b0000;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 240, 0.92);
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 20px;
+      width: 85%;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    h1 {
+      color: #5b0a0a;
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 3px #fff;
+    }
+
+    .horses-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .horse {
+      background-color: #fff9f2;
+      border: 2px solid #5b0a0a;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .horse:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(91, 10, 10, 0.5);
+    }
+
+    .horse img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      border: 2px solid #5b0a0a;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 5px;
+    }
+
+    .horse h3 {
+      color: #4b0000;
+      margin-bottom: 8px;
+    }
+
+    .horse p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Батыр</a>
+    <a href="weapons.html">Қару-жарақтар</a>
+    <a href="clothes.html">Киімдері</a>
+    <a href="horses.html">Аттары</a>
+    <a href="about.html">Автор туралы</a>
+  </nav>
+
+  <div class="search-box" style="
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+">
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Аттың атын жаз..." 
+        oninput="searchHorse()"
+        style="padding: 12px; width: 300px; font-size: 16px; border-radius: 8px; border: 2px solid darkred;">
+
+    <button 
+        onclick="searchHorse()" 
+        style="padding: 12px 20px; font-size: 16px; background: darkred; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        Іздеу
+    </button>
+</div>
+
+
+<script>
+function searchHorse() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let horses = document.querySelectorAll(".horse");
+
+    horses.forEach(function(h) {
+        let name = h.querySelector("h3").innerText.toLowerCase();
+        h.style.display = name.includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+  
+
+  <div class="container">
+    <h1>Қазақ батырларының аттары</h1>
+
+    
+    
+
+    <div class="horses-list">
+      <div class="horse">
+        <img src="акуба 2.jpg" alt="Аққұба">
+        <h3>Аққұба</h3>
+        <p>Ақ түсті, жылдам әрі төзімді. Ұзақ жорыққа шыдайтын батыр жылқысы.</p>
+      </div>
+      <div class="horse">
+        <img src="кап каращка.jpeg" alt="Қараторы">
+        <h3>Қараторы</h3>
+        <p>Қара түсті, күшті және берік. Алаңсыз даланы шарлай алады.</p>
+      </div>
+      <div class="horse">
+        <img src="кызы.jpg" alt="Қызыл">
+        <h3>Қызыл</h3>
+        <p>Қызыл-қоңыр, епті әрі жылдам. Батырларға серік болар жылқы.</p>
+      </div>
+      <div class="horse">
+        <img src="акалтеке.jpg" alt="Теке">
+        <h3>Теке</h3>
+        <p>Кіші, төзімді және таулы жерлерге бейім. Шектеулі жолдарға жарайды.</p>
+      </div>
+      <div class="horse">
+        <img src="ала.jpg" alt="Ала">
+        <h3>Ала</h3>
+        <p>Әдемі дақтары бар, күшті және епті. Ұзақ сапарға лайықты.</p>
+      </div>
+    
+  
+<div class="horse">
+    <img src="араб.jpg" alt="Араб жылқысы">
+    <h3>Араб жылқысы</h3>
+    <p>Әлемге әйгілі жүйрік тұқым. Ұзақ қашықтыққа төзімді, дене бітімі жеңіл әрі әсем, мойны ұзын, жүрісі шапшаң. Мінезі сергек әрі иесіне берік.</p>
+</div>
+
+<div class="horse">
+    <img src="мустанг.jpg" alt="Мустанг">
+    <h3>Мустанг</h3>
+    <p>АҚШ далаларында еркін өсетін жабайыланған тұқым. Өте төзімді, епті және мықты, табиғи инстинкті күшті.</p>
+</div>
+
+<div class="horse">
+    <img src="гонновер.jpg" alt="Ганновер">
+    <h3>Ганновер</h3>
+    <p>Германияның атақты спорттық тұқымы. Күшті, тепе-теңдігі жақсы және секіру, дрессура сияқты жарыстарда үздік.</p>
+</div>
+
+</body>
+</html>
