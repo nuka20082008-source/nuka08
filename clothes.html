@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Батырлардың киімдері</title>
+  <link rel="stylesheet" href="style.css">
+
+ 
+  <style>
+   
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      color: #2b1d0e;
+      background: url('8.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    
+    nav {
+      background: linear-gradient(to right, #4b0000, #8b1e1e);
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      color: #ffdd99;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 20px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: 0.3s;
+      
+    }
+
+    nav a:hover {
+      background: #ffcc00;
+      color: #4b0000;
+    }
+
+    
+    .container {
+      background-color: rgba(255, 255, 240, 0.92);
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 20px;
+      width: 85%;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+      
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      color: #5b0a0a;
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 3px #fff;
+    }
+
+    
+    .clothes-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .cloth {
+      background-color: #fff9f2;
+      border: 2px solid #5b0a0a;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cloth:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(91, 10, 10, 0.5);
+    }
+
+   .cloth img {
+  width: 100%;
+  height: 250px; 
+  object-fit: contain; 
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border: 2px solid #5b0a0a;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 5px; 
+}
+
+
+    .cloth h3 {
+      color: #4b0000;
+      margin-bottom: 8px;
+    }
+
+    .cloth p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+  
+
+
+    
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Батыр</a>
+    <a href="weapons.html">Қару-жарақтар</a>
+    <a href="clothes.html">Киімдері</a>
+    <a href="horses.html">Аттары</a>
+    <a href="about.html">Автор туралы</a>
+  </nav>
+
+  <div class="search-box" style="
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+">
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Киімді жаз..." 
+        oninput="searchCloth()"
+        style="padding: 12px; width: 300px; font-size: 16px; border-radius: 8px; border: 2px solid darkred;">
+
+    <button 
+        onclick="searchCloth()" 
+        style="padding: 12px 20px; font-size: 16px; background: darkred; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        Іздеу
+    </button>
+</div>
+
+<script>
+function searchCloth() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let clothes = document.querySelectorAll(".cloth");
+
+    clothes.forEach(function(c) {
+        let name = c.querySelector("h3").innerText.toLowerCase();
+        c.style.display = name.includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+  
+
+
+  
+  <div class="container">
+    <h1>Қазақ батырларының киімдері</h1>
+
+    <div class="clothes-list">
+      <div class="cloth">
+        <img src="сауыт 3.jpg" alt="Сауыт">
+        <h3>Сауыт</h3>
+        <p>Темірден немесе былғарыдан жасалған қорғаныш киім. Батырларды жебе мен қылыш соққысынан сақтаған.</p>
+      </div>
+
+      <div class="cloth">
+        <img src="дулыга.jpg" alt="Дулыға">
+        <h3>Дулыға</h3>
+        <p>Батырдың бас киімі — темір шлем. Ол соғыста басты, мойынды және бетті қорғайтын болған.</p>
+      </div>
+
+      <div class="cloth">
+        <img src="Якутский национальный костюм.jpeg" alt="Шекпен">
+        <h3>Шекпен</h3>
+        <p>Жүннен немесе киізден тігілген жылы киім. Жауынгерлерді суық пен желден қорғаған.</p>
+      </div>
+
+      <div class="cloth">
+        <img src="етык.webp" alt="Етік">
+        <h3>Етік</h3>
+        <p>Жылқы немесе сиыр терісінен тігілген берік аяқ киім. Ұзақ жорықтарға төзімді және ыңғайлы болған.</p>
+      </div>
+    
+
+      <div class="cloth">
+    <img src="белдык.jpg" alt="Белдік">
+    <h3>Белдік</h3>
+    <p>Қару мен керек-жарақты бекітуге арналған киім аксессуары. Батырлар оны беліне қысып, қаруды бекітетін.</p>
+</div>
+
+
+<div class="cloth">
+    <img src="шапан.png" alt="Шапан">
+    <h3>Шапан</h3>
+    <p>Қалың матадан тігілген, батырларды суықтан және желден қорғайтын дәстүрлі киім. Әдетте әшекейлі және кең болатыны ерекшелігі.</p>
+</div>
+
+<div class="cloth">
+    <img src="тымак 2.jpg" alt="Бөрік">
+    <h3>Бөрік</h3>
+    <p>Қазақ халқының дәстүрлі бас киімі. Әдетте қысқы мезгілде киіліп, жүн немесе былғарыдан жасалады. Батырлар мен көшпенділерді суықтан қорғайды, кейде әшекейлі болып та келеді.</p>
+</div>
+
+
+<div class="cloth">
+    <img src="тон.jpg" alt="Тон">
+    <h3>Тон</h3>
+    <p>Қазақтың дәстүрлі қысқы киімі — тон. Әдетте қой, тақі, түлкі, қасқыр сияқты жүнді мал терісінен тігіліп, суықтан қорғау үшін қолданылады.</p>
+</div>
+
+  
+</body>
+</html>
