@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Қазақ батырлары</title>
+  <link rel="stylesheet" href="style.css">
+
+  <audio id="audioPlayer" controls autoplay loop style="width: 50%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+  <source src="музыка батыр.mp3" type="audio/mpeg">
+  Сіздің браузер аудионы қолдамайды.
+</audio>
+  
+  
+  
+  <body style="background-image: url(5.jpeg); background-size: cover; background-repeat: no-repeat;"></body>
+
+  <style>
+    nav {
+      background: linear-gradient(to right, #4b0000, #8b1e1e);
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    footer {
+      background-color: #4b0000;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      width: 100%;
+    }
+    .search-box {
+      margin-bottom: 30px;
+    }
+
+    .search-box input {
+      padding: 10px;
+      width: 60%;
+      max-width: 300px;
+      border-radius: 8px;
+      border: 2px solid darkred;
+      font-size: 16px;
+    }
+
+    .search-box button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+      background-color: darkred;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .search-box button:hover {
+      background-color: #8b1e1e;
+    }
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 20px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #ffcc00;
+      color: black;
+    }
+
+   
+.container {
+  background-color: rgba(255, 255, 240, 0.92);
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 20px;
+  width: 85%;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  text-align: center;
+
+  
+  animation: fadeIn 1.2s ease;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;              
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;               
+    transform: translateY(0); 
+  }
+}
+
+
+    h1 {
+      color: darkred;
+      text-shadow: 2px 2px 5px white;
+      margin-bottom: 40px;
+    }
+
+    .warriors-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .warrior {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 3px solid darkred;
+      border-radius: 12px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      text-align: left;
+    }
+
+    .warrior:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px darkred;
+    }
+
+    .warrior img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid black;
+      margin-bottom: 15px;
+    }
+
+    .warrior h3 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .warrior p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<style>
+    body {
+      background-image: url('3.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: linear-gradient(to right, #4b0000, #8b1e1e);
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 20px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #ffcc00;
+      color: black;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 240, 0.92);
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 20px;
+      width: 85%;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: darkred;
+      text-shadow: 2px 2px 5px white;
+    }
+
+    .weapons-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .weapon {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 3px solid darkred;
+      border-radius: 12px;
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+      transition: .3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .weapon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px darkred;
+    }
+
+    .weapon img {
+      width: 220px;
+      height: 150px;
+      border-radius: 10px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <a href="index.html">Батыр</a>
+    <a href="weapons.html">Қару-жарақтар</a>
+    <a href="clothes.html">Киімдері</a>
+    <a href="horses.html">Аттары</a>
+    <a href="about.html">Автор туралы</a>
+  </nav>
+
+
+  <div class="search-box" style="
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+">
+  <input 
+    type="text"
+    id="searchInput"
+    placeholder="батырдың атын жаз..."
+    oninput="searchWarrior()"
+    style="padding: 12px; width: 300px; font-size: 16px; border-radius: 8px; border: 2px solid darkred;">
+  
+  <button onclick="searchWarrior()" 
+    style="padding: 12px 20px; font-size: 16px; background: darkred; color: white; border: none; border-radius: 8px; cursor: pointer;">
+    Іздеу
+  </button>
+</div>
+
+
+  <script>
+  function searchWarrior() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let warriors = document.querySelectorAll(".warrior");
+
+    warriors.forEach(function(w) {
+      let name = w.querySelector("h3").innerText.toLowerCase();
+      w.style.display = name.includes(input) ? "block" : "none";
+    });
+  }
+</script>
+
+
+  
+  
+  <div class="container">
+    <h1>Қазақ батырлары</h1>
+
+    <div class="warriors-list">
+      
+      <div class="warrior">
+        <img src="2.jpeg" width="50" height="50" alt="Қабанбай батыр">
+        <h3>Қабанбай батыр</h3>
+        <p><b>1691-1770 жж.</b> Қазақтың әйгілі қолбасшысы әрі батыр. Жоңғар шапқыншылығына қарсы күресте ерлік көрсеткен.</p>
+        <p>103 шайқаста жеңіске жеткен, аңырақай шайқасында ерекше көзге түскен.</p>
+          
+          
+         <video width="300" height="225" controls> <source src="кабанбай видео 2.mp4" type="video/mp4"> Браузер видеоны қолдамайды. </video> 
+        <p><b>Тағы да қосымша мәліметтер: </p>
+        <a href="https://youtu.be/PgjSNo9IfUE?si=bTK88qQr84E8_BAZ" target="_blank">Видеоны көру</a></p></b>
+        </div>
+  
+
+
+        <div class="warrior">
+        <img src="наурызбай.webp" alt="Наурызбай батыр">
+        <h3>Наурызбай батыр</h3>
+        <p><b>1706-1781 жж.</b> Абылай ханның сенімді серігі, жоңғарларға қарсы күресте көрнекті тұлға.</p>
+        <p>Ұлы жүз, Шапырашты руынан шыққан, ел қорғаны ретінде танылған.</p>
+          <video width="300" height="225" controls> <source src="наурызбай видео.mp4" type="video/mp4">  </video> 
+         
+         <p><b>Тағы да қосымша мәліметтер: </p>
+          <a href="https://youtu.be/x4BjQF_Uizg?si=s9YlPmJ1lXtn0BQI" target="_blank">Видеоны көру</a></p></b>
+        </div>
+
+
+
+      <div class="warrior">
+        <img src="богенбай.jpg" alt="Бөгенбай батыр">
+        <h3>Бөгенбай батыр</h3>
+        <p><b>1706-1781 жж.</b> Қазақ елінің мықты қолбасшысы. Жоңғар шапқыншылығына қарсы күресте маңызды рөл атқарған.</p>
+        <p>Қалмақтармен соғыста ерлік көрсеткен, батыл әрі әділ көшбасшы.</p>
+        
+
+        <video width="300" height="225" controls> <source src="богенбай видео.mp4" type="video/mp4">  </video> 
+         
+         <p><b>Тағы да қосымша мәліметтер: </p>
+          <a href="https://youtu.be/x6oVhdlz1cE?si=daxbun2eMIUJDG4R" target="_blank">Видеоны көру</a></p></b>
+        </div>
+        
+        <div class="warrior">
+    <img src="райымбек батыр.jpeg" alt="Райымбек батыр">
+    <h3>Райымбек батыр</h3>
+    <p><b>1705-1785 жж.</b> Қазақ халқының белгілі қолбасшысы. Жоңғар шапқыншылығына қарсы күресте үлкен ерлік көрсетті.</p>
+    <p>Батылдығы, әділдігі және көшбасшылық қабілетімен танымал.</p>
+    <video width="300" height="225" controls>
+        <source src="райымбек батр.mp4" type="video/mp4">
+    </video>
+    <p><b>Тағы да қосымша мәліметтер: </b></p>
+    <a href="https://youtu.be/RgG5SsYjTMU?si=WmabLYQ5M3i1-qGL" target="_blank">Видеоны көру</a>
+</div>
+
+<div class="warrior">
+    <img src="кенесары.jpg" alt="Кенесары хан">
+    <h3>Кенесары хан</h3>
+    <p><b>1802-1847 жж.</b> Қазақтың соңғы ханы. Ресей империясының отарлау саясатына қарсы күресте басты рөл атқарды.</p>
+    <p>Ерлігі мен батылдығы үшін қазақ тарихында есте қалған көшбасшы.</p>
+    <video width="300" height="225" controls>
+        <source src="кенесары хан видео.mp4" type="video/mp4">
+    </video>
+    <p><b>Тағы да қосымша мәліметтер: </b></p>
+    <a href="https://youtu.be/AwkfNdPhy-o?si=eci5m__943DECJe3" target="_blank">Видеоны көру</a>
+</div>
+
+<div class="warrior">
+    <img src="амангелды.jpg" alt="Амангелді Иманов">
+    <h3>Амангелді Иманов</h3>
+    <p><b>1873-1919 жж.</b> Қазақ халқының батыр жауынгері, Ресей империясына қарсы күрескен және Қарқара көтерілісінде жетекшілік еткен.</p>
+    <p>Елін сүйген, батылдығы мен әділдігі үшін тарихта есте қалған көшбасшы.</p>
+    <video width="300" height="225" controls>
+        <source src="амангелды.mp4" type="video/mp4">
+    </video>
+    <p><b>Тағы да қосымша мәліметтер: </b></p>
+    <a href="https://youtu.be/V_U6pBaKaa8?si=PwTk_Mq13swGxlQn" target="_blank">Видеоны көру</a>
+</div>
+
+<div class="warrior">
+    <img src="исатай.jpg" alt="Исатай Тайманұлы">
+    <h3>Исатай Тайманұлы</h3>
+    <p><b>1791-1838 жж.</b> Қазақ халқының көрнекті батыр әрі көсемі, Ресей империясына қарсы шыққан көтерілістің басшыларының бірі.</p>
+    <p>Елін сүйген, әділдігі мен батылдығы арқылы тарихта есте қалған көшбасшы.</p>
+    <video width="300" height="225" controls>
+        <source src="исатай видео.mp4" type="video/mp4">
+    </video>
+    <p><b>Тағы да қосымша мәліметтер: </b></p>
+    <a href="https://youtu.be/pPntNhNslVA?si=cbGkXOJ_vs1HpyAW" target="_blank">Видеоны көру</a>
+</div>
+
+<div class="warrior">
+    <img src="махамбет.jpg" alt="Махамбет Өтемісұлы">
+    <h3>Махамбет Өтемісұлы</h3>
+    <p><b>1803-1846 жж.</b> Қазақ халқының ақыны, батыр және көтеріліс көсемі. Исатай Тайманұлы көтерілісінде басты серігі болған.</p>
+    <p>Елін сүйген, әділдігі мен ерлігі арқылы тарихта есте қалған көшбасшы.</p>
+    <video width="300" height="225" controls>
+        <source src="махамбет видео.mp4" type="video/mp4">
+    </video>
+    <p><b>Тағы да қосымша мәліметтер: </b></p>
+    <a href="https://youtu.be/w4lQ-DNw7wU?si=n8kGl9FcjrMxVdYG" target="_blank">Видеоны көру</a>
+</div>
+
+<div class="warrior">
+    <img src="султан.jpg" alt="Сұлтан Бибарыс">
+    <h3>Сұлтан Бибарыс</h3>
+    <p><b>XIII ғ.</b> Мәмлюк сұлтаны, Египет пен Сирияны басқарған көрнекті әскери және саяси көшбасшы.</p>
+    <p>Сұлтан Бибарыс әділдігі мен батылдығы арқылы тарихта мәңгі есте қалған көшбасшы.</p>
+    <video width="300" height="225" controls>
+        <source src="султан видео.mp4" type="video/mp4">
+    </video>
+    <p><b>Тағы да қосымша мәліметтер: </b></p>
+    <a href="https://youtu.be/example" target="_blank">Видеоны көру</a>
+</div>
+
+
+
+
+      <footer>
+    &copy; 2025 Қазақ батырлары. Барлық құқықтар сақталған.
+  </footer> 
+  
+   
+
+  
+
+</body>
+</html>
